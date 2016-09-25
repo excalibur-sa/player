@@ -1,0 +1,26 @@
+README
+=======================
+
+1. 目录说明
+	build --- 编译脚本
+	core --- gstreamer 及其依赖的软件包源码目录
+	dot --- 生成的 dot 图存放目录
+	install --- 软件包编译的安装目录，其中包含编译工具 tools 的目录和 release 软件的目录
+	log --- log 存放目录
+	src --- 本地实现的 player/plugins/common 源码目录，其中 common 是公用模块
+	tar --- 软件包目录
+	test --- 测试软件及测试片源存放目录
+	tools --- 编译工具源码目录
+	README --- 帮助文件
+	
+2. 软件编译
+	#cd player/build/
+	#. build.sh
+
+需要说明的是：
+	-> 本源码当前仅仅在 PC 平台上使用，所以在编译过程中使用了 apt-get install 来安装依赖的软件包；
+	-> build.sh 后面有一部分注释掉的 preinstall 的命令（涉及 gstreamer 插件），后续将所有依赖都由源码编译。
+
+3. 功能调试
+	-> 修改 player/build/debug_setting.sh，指定调试相关的环境变量等；
+	-> 在 player/build 目录下运行 env.sh 脚本后即可运行测试程序或 gstreamer 工具。
