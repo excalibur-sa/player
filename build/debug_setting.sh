@@ -4,7 +4,7 @@
 #             debug setting              #
 ##########################################
 # debug log color setting
-#export GST_DEBUG_NO_COLOR=1
+export GST_DEBUG_NO_COLOR=1
 
 # dot file generation setting
 export GST_DEBUG_DUMP_DOT_DIR=${DOT_DIR}
@@ -20,7 +20,7 @@ rm *.dot
 
 # debug log level
 export GST_DEBUG=2
-#export GST_DEBUG=
+export GST_DEBUG=2,qtdemux:7
 
 ##########################################
 #             test command               #
