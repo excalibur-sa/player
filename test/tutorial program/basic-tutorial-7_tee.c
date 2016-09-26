@@ -1,0 +1,116 @@
+/*
+ *Use queue to start a new thread to cope data.
+ *Use tee to copy the stream to do different operation.
+ *Gstreamer version change: ffmpegcolorspace -> videoconvert; tee element src%d -> src_%u.
+ */
+#include <gst/gst.h>
+  
+int main(int argc, char *argv[]) {
+  GstElement *pipeline, *audio_source, *tee, *audio_queue, *audio_convert, *audio_resample, *audio_sink;
+  GstElement *video_queue, *visual, *video_convert, *video_sink;
+  GstBus *bus;
+  GstMessage *msg;
+  GstPadTemplate *tee_src_pad_template;
+  GstPad *tee_audio_pad, *tee_video_pad;
+  GstPad *queue_audio_pad, *queue_video_pad;
+  
+  /* Initialize GStreamer */
+  gst_init (&argc, &argv);
+  
+  /* Create the elements */
+  audio_source = gst_element_factory_make ("audiotestsrc", "audio_source");
+  if(!audio_source) g_printerr("audio_source create error!\n");
+
+  tee = gst_element_factory_make ("tee", "tee");
+  if(!tee) g_printerr("tee create error!\n");
+
+  audio_queue = gst_element_factory_make ("queue", "audio_queue");
+  if(!audio_queue) g_printerr("audio_queue create error!\n");
+
+  audio_convert = gst_element_factory_make ("audioconvert", "audio_convert");
+  if(!audio_convert) g_printerr("audio_convert create error!\n");
+
+  audio_resample = gst_element_factory_make ("audioresample", "audio_resample");
+  if(!audio_resample) g_printerr("audio_resample create error!\n");
+
+  audio_sink = gst_element_factory_make ("autoaudiosink", "audio_sink");
+  if(!audio_sink) g_printerr("audio_sink create error!\n");
+
+  video_queue = gst_element_factory_make ("queue", "video_queue");
+  if(!video_queue) g_printerr("video_queue create error!\n");
+
+  visual = gst_element_factory_make ("wavescope", "visual");
+  if(!visual) g_printerr("visual create error!\n");
+
+  video_convert = gst_element_factory_make ("videoconvert", "csp");
+  if(!video_convert) g_printerr("video_convert create error!\n");
+
+  video_sink = gst_element_factory_make ("autovideosink", "video_sink");
+  if(!video_sink) g_printerr("video_sink create error!\n");
+  
+  /* Create the empty pipeline */
+  pipeline = gst_pipeline_new ("test-pipeline");
+  
+  if (!pipeline || !audio_source || !tee || !audio_queue || !audio_convert || !audio_resample || !audio_sink ||
+      !video_queue || !visual || !video_convert || !video_sink) {
+    g_printerr ("Not all elements could be created.\n");
+    return -1;
+  }
+  
+  /* Configure elements */
+  g_object_set (audio_source, "freq", 215.0f, NULL);
+  g_object_set (visual, "shader", 0, "style", 3, NULL);
+  
+  /* Link all elements that can be automatically linked because they have "Always" pads */
+  gst_bin_add_many (GST_BIN (pipeline), audio_source, tee, audio_queue, audio_convert, audio_resample, audio_sink,
+      video_queue, visual, video_convert, video_sink, NULL);
+  if (gst_element_link_many (audio_source, tee, NULL) != TRUE ||
+      gst_element_link_many (audio_queue, audio_convert, audio_resample, audio_sink, NULL) != TRUE ||
+      gst_element_link_many (video_queue, visual, video_convert, video_sink, NULL) != TRUE) {
+    g_printerr ("Elements could not be linked.\n");
+    gst_object_unref (pipeline);
+    return -1;
+  }
+  
+  /* Manually link the Tee, which has "Request" pads */
+  tee_src_pad_template = gst_element_class_get_pad_template (GST_ELEMENT_GET_CLASS (tee), "src_%u");
+  if(!tee_src_pad_template) g_printerr("tee_src_pad_template get error!\n");
+
+  tee_audio_pad = gst_element_request_pad (tee, tee_src_pad_template, NULL, NULL);
+  g_print ("Obtained request pad %s for audio branch.\n", gst_pad_get_name (tee_audio_pad));
+  queue_audio_pad = gst_element_get_static_pad (audio_queue, "sink");
+  tee_video_pad = gst_element_request_pad (tee, tee_src_pad_template, NULL, NULL);
+  g_print ("Obtained request pad %s for video branch.\n", gst_pad_get_name (tee_video_pad));
+  queue_video_pad = gst_element_get_static_pad (video_queue, "sink");
+  if (gst_pad_link (tee_audio_pad, queue_audio_pad) != GST_PAD_LINK_OK ||
+      gst_pad_link (tee_video_pad, queue_video_pad) != GST_PAD_LINK_OK) {
+    g_printerr ("Tee could not be linked.\n");
+    gst_object_unref (pipeline);
+    return -1;
+  }
+  gst_object_unref (queue_audio_pad);
+  gst_object_unref (queue_video_pad);
+  
+  /* Start playing the pipeline */
+  gst_element_set_state (pipeline, GST_STATE_PLAYING);
+  
+  /* Wait until error or EOS */
+  bus = gst_element_get_bus (pipeline);
+  msg = gst_bus_timed_pop_filtered (bus, GST_CLOCK_TIME_NONE, GST_MESSAGE_ERROR | GST_MESSAGE_EOS);
+  
+  /* Release the request pads from the Tee, and unref them */
+  gst_element_release_request_pad (tee, tee_audio_pad);
+  gst_element_release_request_pad (tee, tee_video_pad);
+  gst_object_unref (tee_audio_pad);
+  gst_object_unref (tee_video_pad);
+  
+  /* Free resources */
+  if (msg != NULL)
+    gst_message_unref (msg);
+  gst_object_unref (bus);
+  gst_element_set_state (pipeline, GST_STATE_NULL);
+  
+  gst_object_unref (pipeline);
+  return 0;
+}
+
