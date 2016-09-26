@@ -1,5 +1,6 @@
 README
 =======================
+项目基于Gstreamer，安装平台为Ubuntu 16.04LTS。其他平台的脚本后续添加。主要用于学习Gstreamer框架。
 
 1. 目录说明
 	build --- 编译脚本
