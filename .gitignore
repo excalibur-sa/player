@@ -6,3 +6,8 @@ dot/
 log/
 install/
 test/.DS_Store
+core/gst-plugins-bad-1.8.3/autom4te.cache/
+core/gst-plugins-base-1.8.3/autom4te.cache/
+core/gst-plugins-good-1.8.3/autom4te.cache/
+core/gst-plugins-ugly-1.8.3/autom4te.cache/
+core/gstreamer-1.8.3/autom4te.cache/
