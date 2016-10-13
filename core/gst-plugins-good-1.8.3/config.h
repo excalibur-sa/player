@@ -358,7 +358,7 @@
 /* #undef HAVE_WAVPACK */
 
 /* Define to enable X libraries and plugins (used by ximagesrc). */
-/* #undef HAVE_X */
+#define HAVE_X /**/
 
 /* Defined if Xdamage is available */
 /* #undef HAVE_XDAMAGE */
@@ -367,7 +367,7 @@
 /* #undef HAVE_XFIXES */
 
 /* Defined if XShm is available */
-/* #undef HAVE_XSHM */
+#define HAVE_XSHM 1
 
 /* Define to enable zlib support for qtdemux/matroska. */
 #define HAVE_ZLIB /**/
@@ -376,7 +376,7 @@
 #define HOST_CPU "x86_64"
 
 /* gettext locale dir */
-#define LOCALEDIR "/home/shena/player/install//release/share/locale"
+#define LOCALEDIR "/home/shena/work/player/build/..//install//release/share/locale"
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -403,7 +403,7 @@
 #define PACKAGE_VERSION "1.8.3"
 
 /* directory where plugins are located */
-#define PLUGINDIR "/home/shena/player/install//release/lib/gstreamer-1.0"
+#define PLUGINDIR "/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 
 /* The size of `char', as computed by sizeof. */
 /* #undef SIZEOF_CHAR */

@@ -1,8 +1,8 @@
 prefix=
 exec_prefix=
-libdir=/home/shena/player/core/gst-plugins-good-1.8.3/gst-libs/gst
-includedir=/home/shena/player/core/gst-plugins-good-1.8.3/gst-libs
-pluginsdir=/home/shena/player/core/gst-plugins-good-1.8.3
+libdir=/home/shena/work/player/core/gst-plugins-good-1.8.3/gst-libs/gst
+includedir=/home/shena/work/player/core/gst-plugins-good-1.8.3/gst-libs
+pluginsdir=/home/shena/work/player/core/gst-plugins-good-1.8.3
 
 Name: GStreamer Good Plugins, Uninstalled
 Description: Streaming media framework, good plugins, uninstalled

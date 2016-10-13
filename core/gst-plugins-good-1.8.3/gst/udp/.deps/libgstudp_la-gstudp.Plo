@@ -1,7 +1,7 @@
 libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
  ../../config.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/net/gstnetaddressmeta.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gst.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/net/gstnetaddressmeta.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gst.h \
  /home/shena/player/install/release/include/glib-2.0/glib.h \
  /home/shena/player/install/release/include/glib-2.0/glib/galloca.h \
  /home/shena/player/install/release/include/glib-2.0/glib/gtypes.h \
@@ -116,8 +116,8 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
  /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /home/shena/player/install/release/include/glib-2.0/glib/glib-autocleanups.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/glib-compat.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstenumtypes.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/glib-compat.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstenumtypes.h \
  /home/shena/player/install/release/include/glib-2.0/glib-object.h \
  /home/shena/player/install/release/include/glib-2.0/gobject/gbinding.h \
  /home/shena/player/install/release/include/glib-2.0/gobject/gobject.h \
@@ -137,78 +137,78 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
  /home/shena/player/install/release/include/glib-2.0/gobject/gvaluearray.h \
  /home/shena/player/install/release/include/glib-2.0/gobject/gvaluetypes.h \
  /home/shena/player/install/release/include/glib-2.0/gobject/gobject-autocleanups.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstversion.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstatomicqueue.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstbin.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstelement.h \
- /home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstobject.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontrolbinding.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontrolsource.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstclock.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpad.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstbuffer.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstminiobject.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstallocator.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstmemory.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstmeta.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstbufferlist.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcaps.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gststructure.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdatetime.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcapsfeatures.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpadtemplate.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstevent.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstformat.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstiterator.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttaglist.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstsample.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstsegment.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstmessage.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstquery.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttoc.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontext.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdevice.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttask.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttaskpool.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstbus.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstelementfactory.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstplugin.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstmacros.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpluginfeature.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsturi.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstminiobject.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstbufferpool.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstchildproxy.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdebugutils.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdevicemonitor.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdeviceprovider.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstelementmetadata.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsterror.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstversion.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstatomicqueue.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbin.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelement.h \
+ /home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstobject.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontrolbinding.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontrolsource.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstclock.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpad.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbuffer.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstminiobject.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstallocator.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmemory.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmeta.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbufferlist.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcaps.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gststructure.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdatetime.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcapsfeatures.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpadtemplate.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstevent.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstformat.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstiterator.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttaglist.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsample.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsegment.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmessage.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstquery.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttoc.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontext.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdevice.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttask.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttaskpool.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbus.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelementfactory.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstplugin.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmacros.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpluginfeature.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsturi.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstminiobject.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbufferpool.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstchildproxy.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdebugutils.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdevicemonitor.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdeviceprovider.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelementmetadata.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsterror.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstghostpad.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstinfo.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstparamspecs.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstvalue.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpipeline.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpoll.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstpreset.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstprotection.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstregistry.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstsystemclock.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttagsetter.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttocsetter.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracer.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracerfactory.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracerrecord.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttypefind.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gsttypefindfactory.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstutils.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstparse.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/gstcompat.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstghostpad.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstinfo.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstparamspecs.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstvalue.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpipeline.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpoll.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpreset.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstprotection.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstregistry.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsystemclock.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttagsetter.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttocsetter.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracer.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracerfactory.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracerrecord.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttypefind.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttypefindfactory.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstutils.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstparse.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcompat.h \
  /home/shena/player/install/release/include/glib-2.0/gio/gio.h \
  /home/shena/player/install/release/include/glib-2.0/gio/giotypes.h \
  /home/shena/player/install/release/include/glib-2.0/gio/gioenums.h \
@@ -364,19 +364,19 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
  /home/shena/player/install/release/include/glib-2.0/gio/gliststore.h \
  /home/shena/player/install/release/include/glib-2.0/gio/gio-autocleanups.h \
  gstudpsrc.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstpushsrc.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstbasesrc.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstpushsrc.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstbasesrc.h \
  gstudpnetutils.h gstmultiudpsink.h \
- /home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstbasesink.h \
+ /home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstbasesink.h \
  gstudpsink.h gstdynudpsink.h
 
 /usr/include/stdc-predef.h:
 
 ../../config.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/net/gstnetaddressmeta.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/net/gstnetaddressmeta.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gst.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gst.h:
 
 /home/shena/player/install/release/include/glib-2.0/glib.h:
 
@@ -622,9 +622,9 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
 
 /home/shena/player/install/release/include/glib-2.0/glib/glib-autocleanups.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/glib-compat.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/glib-compat.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstenumtypes.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstenumtypes.h:
 
 /home/shena/player/install/release/include/glib-2.0/glib-object.h:
 
@@ -664,103 +664,103 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
 
 /home/shena/player/install/release/include/glib-2.0/gobject/gobject-autocleanups.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstversion.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstversion.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstatomicqueue.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstatomicqueue.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstbin.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbin.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstelement.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelement.h:
 
-/home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
+/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstobject.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstobject.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontrolbinding.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontrolbinding.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontrolsource.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontrolsource.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstclock.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstclock.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpad.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpad.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstbuffer.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbuffer.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstminiobject.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstminiobject.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstallocator.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstallocator.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstmemory.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmemory.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstmeta.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmeta.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstbufferlist.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbufferlist.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcaps.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcaps.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gststructure.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gststructure.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdatetime.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdatetime.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcapsfeatures.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcapsfeatures.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpadtemplate.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpadtemplate.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstevent.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstevent.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstformat.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstformat.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstiterator.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstiterator.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttaglist.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttaglist.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstsample.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsample.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstsegment.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsegment.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstmessage.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmessage.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstquery.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstquery.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttoc.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttoc.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcontext.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcontext.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdevice.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdevice.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttask.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttask.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttaskpool.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttaskpool.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstbus.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbus.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstelementfactory.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelementfactory.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstplugin.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstplugin.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstmacros.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstmacros.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpluginfeature.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpluginfeature.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsturi.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsturi.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstminiobject.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstminiobject.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstbufferpool.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstbufferpool.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstchildproxy.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstchildproxy.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdebugutils.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdebugutils.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdevicemonitor.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdevicemonitor.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdeviceprovider.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdeviceprovider.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstelementmetadata.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstelementmetadata.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsterror.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsterror.h:
 
 /usr/include/errno.h:
 
@@ -774,45 +774,45 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
 
 /usr/include/asm-generic/errno-base.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstghostpad.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstghostpad.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstinfo.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstinfo.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstparamspecs.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstparamspecs.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstvalue.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstvalue.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpipeline.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpipeline.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpoll.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpoll.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstpreset.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstpreset.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstprotection.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstprotection.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstregistry.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstregistry.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstsystemclock.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstsystemclock.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttagsetter.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttagsetter.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttocsetter.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttocsetter.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracer.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracer.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracerfactory.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracerfactory.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttracerrecord.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttracerrecord.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttypefind.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttypefind.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gsttypefindfactory.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gsttypefindfactory.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstutils.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstutils.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstparse.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstparse.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/gstcompat.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/gstcompat.h:
 
 /home/shena/player/install/release/include/glib-2.0/gio/gio.h:
 
@@ -1128,15 +1128,15 @@ libgstudp_la-gstudp.lo: gstudp.c /usr/include/stdc-predef.h \
 
 gstudpsrc.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstpushsrc.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstpushsrc.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstbasesrc.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstbasesrc.h:
 
 gstudpnetutils.h:
 
 gstmultiudpsink.h:
 
-/home/shena/player/install//release/include/gstreamer-1.0/gst/base/gstbasesink.h:
+/home/shena/work/player/build/..//install//release/include/gstreamer-1.0/gst/base/gstbasesink.h:
 
 gstudpsink.h:
 

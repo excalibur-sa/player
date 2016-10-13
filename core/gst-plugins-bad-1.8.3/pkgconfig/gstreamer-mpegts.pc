@@ -1,4 +1,4 @@
-prefix=/home/shena/player/install//release
+prefix=/home/shena/work/player/build/..//install//release
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/gstreamer-1.0

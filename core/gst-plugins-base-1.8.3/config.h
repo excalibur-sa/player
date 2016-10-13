@@ -55,7 +55,7 @@
 #define GST_API_VERSION "1.0"
 
 /* system wide data directory */
-#define GST_DATADIR "/home/shena/player/install//release/share"
+#define GST_DATADIR "/home/shena/work/player/build/..//install//release/share"
 
 /* Define if extra runtime checks should be enabled */
 /* #undef GST_ENABLE_EXTRA_CHECKS */
@@ -73,7 +73,7 @@
 /* #undef GST_HAVE_UNSAFE_FORK */
 
 /* plugin install helper script */
-#define GST_INSTALL_PLUGINS_HELPER "/home/shena/player/install//release/libexec/gst-install-plugins-helper"
+#define GST_INSTALL_PLUGINS_HELPER "/home/shena/work/player/build/..//install//release/libexec/gst-install-plugins-helper"
 
 /* Default errorlevel to use */
 #define GST_LEVEL_DEFAULT GST_LEVEL_NONE
@@ -322,7 +322,7 @@
 /* #undef LIBVISUAL_PLUGINSBASEDIR */
 
 /* gettext locale dir */
-#define LOCALEDIR "/home/shena/player/install//release/share/locale"
+#define LOCALEDIR "/home/shena/work/player/build/..//install//release/share/locale"
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -349,7 +349,7 @@
 #define PACKAGE_VERSION "1.8.3"
 
 /* directory where plugins are located */
-#define PLUGINDIR "/home/shena/player/install//release/lib/gstreamer-1.0"
+#define PLUGINDIR "/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 
 /* The size of `char', as computed by sizeof. */
 /* #undef SIZEOF_CHAR */

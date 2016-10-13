@@ -1,4 +1,4 @@
-prefix=/home/shena/player/install//release
+prefix=/home/shena/work/player/build/..//install//release
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/gstreamer-1.0
@@ -7,8 +7,8 @@ pluginsdir=${exec_prefix}/lib/gstreamer-1.0
 datarootdir=${prefix}/share
 datadir=${datarootdir}
 girdir=${datadir}/gir-1.0
-completionsdir=/home/shena/player/install//release/share/bash-completion/completions
-helpersdir=/home/shena/player/install//release/share/bash-completion/helpers
+completionsdir=/home/shena/work/player/build/..//install//release/share/bash-completion/completions
+helpersdir=/home/shena/work/player/build/..//install//release/share/bash-completion/helpers
 typelibdir=${libdir}/girepository-1.0
 
 Name: GStreamer

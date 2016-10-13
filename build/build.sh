@@ -238,8 +238,8 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #TODO
 #sudo apt-get install autogen
 
-gnutls_config="--with-included-libtasn1 --without-p11-kit"
-building_function ${CORE_DIR} gnutls-3.5.4.tar.xz gnutls-3.5.4 ${PROJECT_PREFIX} ${gnutls_config}
+#gnutls_config="--with-included-libtasn1 --without-p11-kit"
+#building_function ${CORE_DIR} gnutls-3.5.4.tar.xz gnutls-3.5.4 ${PROJECT_PREFIX} ${gnutls_config}
 
 #building_function ${CORE_DIR} glib-networking-2.50.0.tar.xz glib-networking-2.50.0 ${PROJECT_PREFIX}
 #building_function ${CORE_DIR} libxml2-2.9.4.tar.gz libxml2-2.9.4 ${PROJECT_PREFIX}

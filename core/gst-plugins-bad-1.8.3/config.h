@@ -695,13 +695,13 @@
 #define HOST_CPU "x86_64"
 
 /* library dir */
-#define LIBDIR "/home/shena/player/install//release/lib"
+#define LIBDIR "/home/shena/work/player/build/..//install//release/lib"
 
 /* directory in which the detected libvisual's plugins are located */
 /* #undef LIBVISUAL_PLUGINSBASEDIR */
 
 /* gettext locale dir */
-#define LOCALEDIR "/home/shena/player/install//release/share/locale"
+#define LOCALEDIR "/home/shena/work/player/build/..//install//release/share/locale"
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -737,7 +737,7 @@
 #define PACKAGE_VERSION "1.8.3"
 
 /* directory where plugins are located */
-#define PLUGINDIR "/home/shena/player/install//release/lib/gstreamer-1.0"
+#define PLUGINDIR "/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */

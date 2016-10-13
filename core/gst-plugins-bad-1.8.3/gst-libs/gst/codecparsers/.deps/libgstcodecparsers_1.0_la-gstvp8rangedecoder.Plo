@@ -114,7 +114,7 @@ libgstcodecparsers_1.0_la-gstvp8rangedecoder.lo: gstvp8rangedecoder.c \
  /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /home/shena/player/install/release/include/glib-2.0/glib/glib-autocleanups.h \
- /home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
+ /home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
  dboolhuff.h /usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h \
  /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/wchar.h
 
@@ -366,7 +366,7 @@ gstvp8rangedecoder.h:
 
 /home/shena/player/install/release/include/glib-2.0/glib/glib-autocleanups.h:
 
-/home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
+/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
 
 dboolhuff.h:
 

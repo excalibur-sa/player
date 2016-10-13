@@ -30,7 +30,7 @@
 #define GST_API_VERSION "1.0"
 
 /* data dir */
-#define GST_DATADIR "/home/shena/player/install//release/share"
+#define GST_DATADIR "/home/shena/work/player/build/..//install//release/share"
 
 /* Define if option parsing is disabled */
 /* #undef GST_DISABLE_OPTION_PARSING */
@@ -72,10 +72,10 @@
 /* #undef GST_PLUGIN_BUILD_STATIC */
 
 /* location of the installed gst-plugin-scanner */
-#define GST_PLUGIN_SCANNER_INSTALLED "/home/shena/player/install//release/libexec/gstreamer-1.0/gst-plugin-scanner"
+#define GST_PLUGIN_SCANNER_INSTALLED "/home/shena/work/player/build/..//install//release/libexec/gstreamer-1.0/gst-plugin-scanner"
 
 /* location of the installed gst-ptp-helper */
-#define GST_PTP_HELPER_INSTALLED "/home/shena/player/install//release/libexec/gstreamer-1.0/gst-ptp-helper"
+#define GST_PTP_HELPER_INSTALLED "/home/shena/work/player/build/..//install//release/libexec/gstreamer-1.0/gst-ptp-helper"
 
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1
@@ -202,7 +202,7 @@
 #define HAVE_GETTEXT 1
 
 /* Have GMP library */
-/* #undef HAVE_GMP */
+#define HAVE_GMP 1
 
 /* Define to 1 if you have the `gmtime_r' function. */
 #define HAVE_GMTIME_R 1
@@ -429,10 +429,10 @@
 #define HOST_CPU "x86_64"
 
 /* library dir */
-#define LIBDIR "/home/shena/player/install//release/lib"
+#define LIBDIR "/home/shena/work/player/build/..//install//release/lib"
 
 /* gettext locale dir */
-#define LOCALEDIR "/home/shena/player/install//release/share/locale"
+#define LOCALEDIR "/home/shena/work/player/build/..//install//release/share/locale"
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -468,7 +468,7 @@
 #define PACKAGE_VERSION "1.8.3"
 
 /* directory where plugins are located */
-#define PLUGINDIR "/home/shena/player/install//release/lib/gstreamer-1.0"
+#define PLUGINDIR "/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */

@@ -314,6 +314,7 @@ gst_dash_demux_get_live_seek_range (GstAdaptiveDemux * demux, gint64 * start,
   GDateTime *mstart;
   GTimeSpan stream_now;
 
+
   if (self->client->mpd_node->availabilityStartTime == NULL)
     return FALSE;
 

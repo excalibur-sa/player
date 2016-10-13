@@ -30,7 +30,7 @@ export GST_DEBUG=dashdemux:7,adaptivedemux:7
 ##########################################
 #             test command               #
 ##########################################
-#gst-launch-1.0 playbin uri=file:///home/shena/player/test/mediafiles/MJ.mp3
+#gst-launch-1.0 playbin uri=file:///home/shena/work/player/test/mediafiles/MJ.mp3
 #gst-launch-1.0 playbin uri=https://gstreamer.freedesktop.org/data/media/large/PSPGO_FINAL.MP4
 
 # for MPEG-DASH

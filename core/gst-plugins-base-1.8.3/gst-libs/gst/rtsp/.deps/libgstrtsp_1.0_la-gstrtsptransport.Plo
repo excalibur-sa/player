@@ -26,7 +26,7 @@ libgstrtsp_1.0_la-gstrtsptransport.lo: gstrtsptransport.c \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h gstrtsptransport.h \
- /home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
+ /home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h \
  ../../../gst-libs/gst/rtsp/gstrtspdefs.h \
  /home/shena/player/install/release/include/glib-2.0/glib.h \
  /home/shena/player/install/release/include/glib-2.0/glib/galloca.h \
@@ -215,7 +215,7 @@ libgstrtsp_1.0_la-gstrtsptransport.lo: gstrtsptransport.c \
 
 gstrtsptransport.h:
 
-/home/shena/player/install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
+/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/include/gst/gstconfig.h:
 
 ../../../gst-libs/gst/rtsp/gstrtspdefs.h:
 
