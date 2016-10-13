@@ -992,13 +992,13 @@ S["GST_OBJ_CXXFLAGS"]="$(GST_ALL_CXXFLAGS)"
 S["GST_OBJ_CFLAGS"]="$(GST_ALL_CFLAGS)"
 S["GST_LIB_LDFLAGS"]="-export-symbols-regex \\^_?\\(gst_\\|Gst\\|GST_\\).*"
 S["GST_ALL_LDFLAGS"]="-no-undefined -Wl,-Bsymbolic-functions"
-S["GST_ALL_LIBS"]="-L/home/shena/player/install/release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0  $(GCOV_LIBS)"
-S["GST_ALL_CXXFLAGS"]="-I$(top_srcdir)/libs -I$(top_srcdir) -I$(top_builddir)/libs -I$(top_builddir) -pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home"\
-"/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/install/release/include $(GLIB_EXTRA_CFLAGS)  $(GST_OPTION_CXXFLAGS) $(ERROR"\
-"_CXXFLAGS)"
-S["GST_ALL_CFLAGS"]="-I$(top_srcdir)/libs -I$(top_srcdir) -I$(top_builddir)/libs -I$(top_builddir) -pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home"\
-"/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/install/release/include $(GLIB_EXTRA_CFLAGS)  $(GST_OPTION_CFLAGS) $(ERROR_C"\
-"FLAGS)"
+S["GST_ALL_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0  $(GCOV_LIBS)"
+S["GST_ALL_CXXFLAGS"]="-I$(top_srcdir)/libs -I$(top_srcdir) -I$(top_builddir)/libs -I$(top_builddir) -pthread -I/home/shena/work/player/build/..//install//release/include/"\
+"glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/include -I/home/shena/work/player/build/..//install//release/include $(GL"\
+"IB_EXTRA_CFLAGS)  $(GST_OPTION_CXXFLAGS) $(ERROR_CXXFLAGS)"
+S["GST_ALL_CFLAGS"]="-I$(top_srcdir)/libs -I$(top_srcdir) -I$(top_builddir)/libs -I$(top_builddir) -pthread -I/home/shena/work/player/build/..//install//release/include/"\
+"glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/include -I/home/shena/work/player/build/..//install//release/include $(GL"\
+"IB_EXTRA_CFLAGS)  $(GST_OPTION_CFLAGS) $(ERROR_CFLAGS)"
 S["GST_OPTION_CXXFLAGS"]="$(WARNING_CXXFLAGS) $(ERROR_CXXFLAGS) $(DEBUG_CFLAGS) $(PROFILE_CFLAGS) $(GCOV_CFLAGS) $(OPT_CFLAGS) $(DEPRECATED_CFLAGS)"
 S["GST_OPTION_CFLAGS"]="$(WARNING_CFLAGS) $(DEBUG_CFLAGS) $(PROFILE_CFLAGS) $(GCOV_CFLAGS) $(OPT_CFLAGS) $(DEPRECATED_CFLAGS)"
 S["DEPRECATED_CFLAGS"]=""
@@ -1020,17 +1020,17 @@ S["HAVE_GTK_FALSE"]=""
 S["HAVE_GTK_TRUE"]="#"
 S["GTK_LIBS"]=""
 S["GTK_CFLAGS"]=""
-S["GLIB_PREFIX"]="/home/shena/player/install/release"
+S["GLIB_PREFIX"]="/home/shena/work/player/build/..//install//release"
 S["GIO_LDFLAGS"]=""
-S["GIO_LIBS"]="-L/home/shena/player/install/release/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0"
-S["GIO_CFLAGS"]="-pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/instal"\
-"l/release/include"
+S["GIO_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0"
+S["GIO_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/inc"\
+"lude -I/home/shena/work/player/build/..//install//release/include"
 S["GLIB_EXTRA_CFLAGS"]=" -DG_THREADS_MANDATORY -DG_DISABLE_CAST_CHECKS"
 S["GLIB_MKENUMS"]="glib-mkenums"
 S["GLIB_GENMARSHAL"]="glib-genmarshal"
-S["GLIB_LIBS"]="-L/home/shena/player/install/release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0"
-S["GLIB_CFLAGS"]="-pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/instal"\
-"l/release/include"
+S["GLIB_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0"
+S["GLIB_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/inc"\
+"lude -I/home/shena/work/player/build/..//install//release/include"
 S["GLIB_REQ"]="2.40.0"
 S["GST_HAVE_MONOTONIC_CLOCK_FALSE"]="#"
 S["GST_HAVE_MONOTONIC_CLOCK_TRUE"]=""
@@ -1523,9 +1523,9 @@ D["HAVE_INTTYPES_H_WITH_UINTMAX"]=" 1"
 D["HAVE_STDINT_H_WITH_UINTMAX"]=" 1"
 D["HAVE_PTRDIFF_T"]=" 1"
 D["HAVE_INTMAX_T"]=" 1"
-D["GIO_MODULE_DIR"]=" \"/home/shena/player/install/release/lib/gio/modules\""
-D["GIO_LIBDIR"]=" \"/home/shena/player/install/release/lib\""
-D["GIO_PREFIX"]=" \"/home/shena/player/install/release\""
+D["GIO_MODULE_DIR"]=" \"/home/shena/work/player/build/..//install//release/lib/gio/modules\""
+D["GIO_LIBDIR"]=" \"/home/shena/work/player/build/..//install//release/lib\""
+D["GIO_PREFIX"]=" \"/home/shena/work/player/build/..//install//release\""
 D["MEMORY_ALIGNMENT_MALLOC"]=" 1"
 D["GST_LICENSE"]=" \"LGPL\""
 D["LIBDIR"]=" \"/home/shena/work/player/build/..//install//release/lib\""

@@ -30,13 +30,13 @@
 #define GETTEXT_PACKAGE "gst-plugins-ugly-1.0"
 
 /* The GIO library directory. */
-#define GIO_LIBDIR "/home/shena/player/install/release/lib"
+#define GIO_LIBDIR "/home/shena/work/player/build/..//install//release/lib"
 
 /* The GIO modules directory. */
-#define GIO_MODULE_DIR "/home/shena/player/install/release/lib/gio/modules"
+#define GIO_MODULE_DIR "/home/shena/work/player/build/..//install//release/lib/gio/modules"
 
 /* The GIO install prefix. */
-#define GIO_PREFIX "/home/shena/player/install/release"
+#define GIO_PREFIX "/home/shena/work/player/build/..//install//release"
 
 /* GStreamer API Version */
 #define GST_API_VERSION "1.0"

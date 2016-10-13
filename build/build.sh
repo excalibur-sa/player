@@ -190,7 +190,8 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #sudo apt-get install gobject-introspection
 
 #gstreamer183_config="--with-package-name=\"GStreamer 1.8.3 BLFS\" --with-package-origin=\"http://www.linuxfromscratch.org/blfs/view/svn/\""
-#building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_PREFIX} ${gstreamer183_config}
+#building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_PREFIX} 
+#${gstreamer183_config}
 
 
 
@@ -252,6 +253,7 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #TODO for mp4/mkv etc.
 #sudo apt-get install zlib1g-dev
 #building_function ${CORE_DIR} gst-plugins-good-1.8.3.tar.xz gst-plugins-good-1.8.3 ${PROJECT_PREFIX}
+
 
 ## ************************* for gst-plugins-bad-1.8.3, the dependence as below ************************* 
 ## gst-plugins-bad-1.8.3.tar.xz

@@ -33,13 +33,13 @@
 #define GETTEXT_PACKAGE "gst-plugins-bad-1.0"
 
 /* The GIO library directory. */
-#define GIO_LIBDIR "/home/shena/player/install/release/lib"
+#define GIO_LIBDIR "/home/shena/work/player/build/..//install//release/lib"
 
 /* The GIO modules directory. */
-#define GIO_MODULE_DIR "/home/shena/player/install/release/lib/gio/modules"
+#define GIO_MODULE_DIR "/home/shena/work/player/build/..//install//release/lib/gio/modules"
 
 /* The GIO install prefix. */
-#define GIO_PREFIX "/home/shena/player/install/release"
+#define GIO_PREFIX "/home/shena/work/player/build/..//install//release"
 
 /* Define if GSM header in gsm/ subdir */
 /* #undef GSM_HEADER_IN_SUBDIR */

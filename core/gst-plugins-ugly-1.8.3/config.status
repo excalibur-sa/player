@@ -940,8 +940,9 @@ S["LIBOBJS"]=""
 S["GST_PLUGIN_LDFLAGS"]="-module -avoid-version -export-symbols-regex '^_*gst_plugin_.*' -no-undefined -Wl,-Bsymbolic-functions"
 S["GST_ALL_LDFLAGS"]="-no-undefined -Wl,-Bsymbolic-functions"
 S["GST_CXXFLAGS"]="-I$(top_srcdir)/gst-libs -I$(top_builddir)/gst-libs -pthread -I/home/shena/work/player/build/..//install//release/include/gstreamer-1.0 -I/home/shen"\
-"a/work/player/build/..//install//release/lib/gstreamer-1.0/include -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/instal"\
-"l/release/lib/glib-2.0/include -I/home/shena/player/install/release/include  -DG_THREADS_MANDATORY -DG_DISABLE_CAST_CHECKS $(GST_OPTION_CXXFLAGS)"
+"a/work/player/build/..//install//release/lib/gstreamer-1.0/include -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/she"\
+"na/work/player/build/..//install//release/lib/glib-2.0/include -I/home/shena/work/player/build/..//install//release/include  -DG_THREADS_MANDATORY -"\
+"DG_DISABLE_CAST_CHECKS $(GST_OPTION_CXXFLAGS)"
 S["GST_OPTION_CXXFLAGS"]="$(WARNING_CXXFLAGS) $(ERROR_CXXFLAGS) $(DEBUG_CFLAGS) $(PROFILE_CFLAGS) $(GCOV_CFLAGS) $(OPT_CFLAGS) $(DEPRECATED_CFLAGS)"
 S["GST_OPTION_CFLAGS"]="$(WARNING_CFLAGS) $(ERROR_CFLAGS) $(DEBUG_CFLAGS) $(PROFILE_CFLAGS) $(GCOV_CFLAGS) $(OPT_CFLAGS) $(DEPRECATED_CFLAGS)"
 S["DEPRECATED_CFLAGS"]=""
@@ -964,8 +965,8 @@ S["MPG123_LIBS"]=""
 S["MPG123_CFLAGS"]=""
 S["USE_MPEG2DEC_FALSE"]="#"
 S["USE_MPEG2DEC_TRUE"]=""
-S["MPEG2DEC_LIBS"]="-L/home/shena/player/install//release//lib -lmpeg2"
-S["MPEG2DEC_CFLAGS"]="-I/home/shena/player/install//release//include/mpeg2dec"
+S["MPEG2DEC_LIBS"]="-L/home/shena/work/player/build/..//install//release//lib -lmpeg2"
+S["MPEG2DEC_CFLAGS"]="-I/home/shena/work/player/build/..//install//release//include/mpeg2dec"
 S["USE_MAD_FALSE"]=""
 S["USE_MAD_TRUE"]="#"
 S["MAD_LIBS"]=""
@@ -1024,37 +1025,36 @@ S["GST_PLUGIN_LIBTOOLFLAGS"]="--tag=disable-static"
 S["plugindir"]="$(libdir)/gstreamer-1.0"
 S["PLUGINDIR"]="/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 S["GST_LICENSE"]="LGPL"
-S["GMODULE_NO_EXPORT_LIBS"]="-L/home/shena/player/install/release/lib -lgmodule-2.0 -pthread -lglib-2.0"
-S["GMODULE_NO_EXPORT_CFLAGS"]="-pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/instal"\
-"l/release/include"
+S["GMODULE_NO_EXPORT_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgmodule-2.0 -pthread -lglib-2.0"
+S["GMODULE_NO_EXPORT_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/inc"\
+"lude -I/home/shena/work/player/build/..//install//release/include"
 S["GSTPB_PREFIX"]="/home/shena/work/player/build/..//install//release"
 S["GST_PREFIX"]="/home/shena/work/player/build/..//install//release"
-S["GLIB_PREFIX"]="/home/shena/player/install/release"
+S["GLIB_PREFIX"]="/home/shena/work/player/build/..//install//release"
 S["HAVE_GST_CHECK_FALSE"]="#"
 S["HAVE_GST_CHECK_TRUE"]=""
 S["GSTPB_PLUGINS_DIR"]="/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 S["GST_PLUGINS_BASE_DIR"]="/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/gst:/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0/sys:/h"\
 "ome/shena/work/player/build/..//install//release/lib/gstreamer-1.0/ext"
-S["GST_PLUGINS_BASE_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -L/home/shena/player/install/release/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
+S["GST_PLUGINS_BASE_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
 S["GST_PLUGINS_BASE_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/gstreamer-1.0 -I/home/shena/work/player/build/..//install//release/lib/gstream"\
-"er-1.0/include -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/"\
-"install/release/include"
-S["GST_CHECK_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -L/home/shena/player/install/release/lib -lgstcheck-1.0 -lm -lgstreamer-1.0 -lgobject-2.0 -"\
-"lglib-2.0"
+"er-1.0/include -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2"\
+".0/include -I/home/shena/work/player/build/..//install//release/include"
+S["GST_CHECK_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgstcheck-1.0 -lm -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
 S["GST_CHECK_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/gstreamer-1.0 -I/home/shena/work/player/build/..//install//release/lib/gstream"\
-"er-1.0/include -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/"\
-"install/release/include"
-S["GST_BASE_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -L/home/shena/player/install/release/lib -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib"\
-"-2.0"
+"er-1.0/include -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2"\
+".0/include -I/home/shena/work/player/build/..//install//release/include"
+S["GST_BASE_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
 S["GST_BASE_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/gstreamer-1.0 -I/home/shena/work/player/build/..//install//release/lib/gstream"\
-"er-1.0/include -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/"\
-"install/release/include"
+"er-1.0/include -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2"\
+".0/include -I/home/shena/work/player/build/..//install//release/include"
 S["GST_PLUGINS_DIR"]="/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0"
 S["GST_TOOLS_DIR"]="/home/shena/work/player/build/..//install//release/bin"
-S["GST_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -L/home/shena/player/install/release/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
+S["GST_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0"
 S["GST_CFLAGS"]="-I$(top_srcdir)/gst-libs -I$(top_builddir)/gst-libs -pthread -I/home/shena/work/player/build/..//install//release/include/gstreamer-1.0 -I/home/shen"\
-"a/work/player/build/..//install//release/lib/gstreamer-1.0/include -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/instal"\
-"l/release/lib/glib-2.0/include -I/home/shena/player/install/release/include  -DG_THREADS_MANDATORY -DG_DISABLE_CAST_CHECKS $(GST_OPTION_CFLAGS)"
+"a/work/player/build/..//install//release/lib/gstreamer-1.0/include -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/she"\
+"na/work/player/build/..//install//release/lib/glib-2.0/include -I/home/shena/work/player/build/..//install//release/include  -DG_THREADS_MANDATORY -"\
+"DG_DISABLE_CAST_CHECKS $(GST_OPTION_CFLAGS)"
 S["HAVE_ORCC_FALSE"]=""
 S["HAVE_ORCC_TRUE"]="#"
 S["HAVE_ORC_FALSE"]=""
@@ -1064,15 +1064,15 @@ S["ORCC"]=""
 S["ORC_LIBS"]=""
 S["ORC_CFLAGS"]=""
 S["GIO_LDFLAGS"]=""
-S["GIO_LIBS"]="-L/home/shena/player/install/release/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0"
-S["GIO_CFLAGS"]="-pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/instal"\
-"l/release/include"
+S["GIO_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0"
+S["GIO_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/inc"\
+"lude -I/home/shena/work/player/build/..//install//release/include"
 S["GLIB_EXTRA_CFLAGS"]=" -DG_THREADS_MANDATORY -DG_DISABLE_CAST_CHECKS"
 S["GLIB_MKENUMS"]="glib-mkenums"
 S["GLIB_GENMARSHAL"]="glib-genmarshal"
-S["GLIB_LIBS"]="-L/home/shena/player/install/release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0"
-S["GLIB_CFLAGS"]="-pthread -I/home/shena/player/install/release/include/glib-2.0 -I/home/shena/player/install/release/lib/glib-2.0/include -I/home/shena/player/instal"\
-"l/release/include"
+S["GLIB_LIBS"]="-L/home/shena/work/player/build/..//install//release/lib -lgobject-2.0 -lgmodule-2.0 -pthread -lglib-2.0"
+S["GLIB_CFLAGS"]="-pthread -I/home/shena/work/player/build/..//install//release/include/glib-2.0 -I/home/shena/work/player/build/..//install//release/lib/glib-2.0/inc"\
+"lude -I/home/shena/work/player/build/..//install//release/include"
 S["GLIB_REQ"]="2.40.0"
 S["LIBM"]="-lm"
 S["ENABLE_PLUGIN_DOCS_FALSE"]=""
@@ -1398,9 +1398,9 @@ D["HAVE_PRETTY_FUNCTION"]=" 1"
 D["HAVE_FUNCTION"]=" 1"
 D["HAVE_FUNC"]=" 1"
 D["GST_FUNCTION"]=" __PRETTY_FUNCTION__"
-D["GIO_MODULE_DIR"]=" \"/home/shena/player/install/release/lib/gio/modules\""
-D["GIO_LIBDIR"]=" \"/home/shena/player/install/release/lib\""
-D["GIO_PREFIX"]=" \"/home/shena/player/install/release\""
+D["GIO_MODULE_DIR"]=" \"/home/shena/work/player/build/..//install//release/lib/gio/modules\""
+D["GIO_LIBDIR"]=" \"/home/shena/work/player/build/..//install//release/lib\""
+D["GIO_PREFIX"]=" \"/home/shena/work/player/build/..//install//release\""
 D["DISABLE_ORC"]=" 1"
 D["GST_LICENSE"]=" \"LGPL\""
 D["PLUGINDIR"]=" \"/home/shena/work/player/build/..//install//release/lib/gstreamer-1.0\""
