@@ -248,6 +248,7 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #building_function ${CORE_DIR} libsoup-2.56.0.tar.xz libsoup-2.56.0 ${PROJECT_PREFIX}
 
 #TODO for video sink
+#sudo apt-get install libjpeg-dev
 #sudo apt-get install v4l-utils
 
 #TODO for mp4/mkv etc.
@@ -272,7 +273,9 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #TODO
 #building_function ${CORE_DIR} mad-0.14.2b.tar.gz mad-0.14.2b ${PROJECT_PREFIX}
 
-#building_function ${CORE_DIR} gst-plugins-ugly-1.8.3.tar.xz gst-plugins-ugly-1.8.3 ${PROJECT_PREFIX}
+#sudo apt-get install libx264-dev
+
+building_function ${CORE_DIR} gst-plugins-ugly-1.8.3.tar.xz gst-plugins-ugly-1.8.3 ${PROJECT_PREFIX}
 
 ## ************************* for gst-libav-1.8.3, the dependence as below ************************* 
 ## gst-libav-1.8.3.tar.xz
