@@ -189,8 +189,8 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 #building_function ${CORE_DIR} gobject-introspection-1.50.0.tar.xz gobject-introspection-1.50.0 ${PROJECT_PREFIX} ${gi_config}
 #sudo apt-get install gobject-introspection
 
-#gstreamer183_config="--with-package-name=\"GStreamer 1.8.3 BLFS\" --with-package-origin=\"http://www.linuxfromscratch.org/blfs/view/svn/\""
-#building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_PREFIX} 
+#gstreamer183_config="--disable-check"
+building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_PREFIX} 
 #${gstreamer183_config}
 
 
@@ -275,7 +275,7 @@ cd ${PACKAGE_DIR}/${GST_VERSION}
 
 #sudo apt-get install libx264-dev
 
-building_function ${CORE_DIR} gst-plugins-ugly-1.8.3.tar.xz gst-plugins-ugly-1.8.3 ${PROJECT_PREFIX}
+#building_function ${CORE_DIR} gst-plugins-ugly-1.8.3.tar.xz gst-plugins-ugly-1.8.3 ${PROJECT_PREFIX}
 
 ## ************************* for gst-libav-1.8.3, the dependence as below ************************* 
 ## gst-libav-1.8.3.tar.xz

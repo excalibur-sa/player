@@ -16,7 +16,7 @@ else
 #	gcc -Wall -g $1 -o $1.exe $(pkg-config --cflags --libs gstreamer-1.0 gtk+-2.0 gstreamer-interfaces-0.10)
 
 #just for normal program
-	gcc -Wall -g $1 -o $1.exe $(pkg-config --cflags --libs gstreamer-1.0) -I/home/shena/share/gstreamer1790/gstreamer1.7.90/src/gstreamer-1.7.90/
+	gcc -Wall -g $1 -o $1.exe $(pkg-config --cflags --libs gstreamer-1.0 gtk+-2.0)
 	if [ $? == 0 ]
 	then
 		echo "Done..."

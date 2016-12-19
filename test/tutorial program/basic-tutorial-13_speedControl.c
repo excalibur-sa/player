@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
     " 'Q' to quit\n");
   
   /* Build the pipeline */
-  data.pipeline = gst_parse_launch ("playbin2 uri=file:///home/shena/media_data/1.mp4", NULL);
+  data.pipeline = gst_parse_launch ("playbin2 uri=file:///home/shena/work/player/test/mediafiles/ad.mp4", NULL);
   
   /* Add a keyboard watch so we get notified of keystrokes */
 #ifdef _WIN32

@@ -51,6 +51,9 @@ export GST_DEBUG=2
 #gst-launch-1.0 v4l2src  do-timestamp="true" ! image/jpeg, width=640, height=480 !  jpegdec ! avenc_mpeg4 ! filesink location=file.mp4
 #gst-launch-1.0 v4l2src  do-timestamp="true" num-buffers=100 ! image/jpeg, width=640, height=480 ! tee name=t ! queue ! jpegdec ! videoconvert ! autovideosink t. ! queue ! jpegdec ! videoconvert ! autovideosink t. ! queue ! jpegdec ! videoconvert ! autovideosink t. ! queue ! multifilesink location="image%02d.jpg"
 
+# 视频特效
+#gst-launch-1.0 v4l2src  ! image/jpeg, width=640, height=480 !  jpegdec  ! videoconvert ! mirror ! ximagesink
+
 # for Screen capture, Shown in screen, Record in mp4 file
 #gst-launch-1.0 -v  ximagesrc  ! tee name=t ! queue ! videoconvert ! ximagesink
 #gst-launch-1.0 -v  ximagesrc  ! videoconvert ! avenc_mpeg4 ! filesink location=screen.mp4
