@@ -1,0 +1,10 @@
+export LIBGL_ALWAYS_SOFTWARE=1
+export GST_REGISTRY_UPDATE="yes"
+export GST_PLUGIN_SCANNER=/home/shena/work/player/install/release/libexec/gstreamer-1.0/gst-plugin-scanner
+export GST_PLUGIN_PATH=/home/shena/work/player/install/release/lib/:/home/shena/work/player/install/release/lib/gstreamer-1.0/:/home/shena/work/player/install/release/lib/x86_64-linux-gnu/:/home/shena/work/player/install/release/lib/x86_64-linux-gnu/gstreamer-1.0
+
+
+test command
+#gst-launch-1.0 filesrc location=/home/shena/work/player/test/mediafiles/ad.mp4 ! decodebin ! glupload ! glcolorconvert ! videorate ! vrcompositor ! video/x-raw\(memory:GLMemory\), width=1080, height=720, framerate=75/1 ! hmdwarp ! glimagesink
+
+#gst-launch-1.0 filesrc location=/home/shena/work/player/test/mediafiles/alien.mpg ! decodebin ! glupload ! glcolorconvert ! videorate ! vrcompositor ! video/x-raw\(memory:GLMemory\), width=1080, height=720, framerate=75/1 ! hmdwarp ! glimagesink

@@ -1,0 +1,6 @@
+./configure --prefix=${PROJECT_PREFIX}                              \
+            --with-default-trust-store-file=/etc/ssl/ca-bundle.crt  \
+            --with-included-libtasn1                                \
+            --with-included-unistring                              &&
+make -j 32                                                         &&
+sudo make install

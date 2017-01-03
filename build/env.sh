@@ -3,9 +3,10 @@
 ##########################################
 #               environment              #
 ##########################################
-CURRENT_DIR=`pwd`
-PROJECT_ROOT=${CURRENT_DIR}/../
-export GST_VERSION=gstreamer-1.8.3
+export CURRENT_DIR=`pwd`
+export PROJECT_ROOT=${CURRENT_DIR}/../
+#export GST_VERSION=gstreamer-1.8.3
+export GST_VERSION=gstreamer-1.10.2
 export BUILD_DIR=${PROJECT_ROOT}/build/
 export INCLUDE_DIR=${PROJECT_ROOT}/include/
 export DOT_DIR=${PROJECT_ROOT}/dot/
@@ -68,9 +69,9 @@ fi
 ##########################################
 #          compile environment           #
 ##########################################
-export LD_LIBRARY_PATH=${PROJECT_LIB}/
+export LD_LIBRARY_PATH=${PROJECT_LIB}:${PROJECT_LIB}/x86_64-linux-gnu:${PROJECT_LIB}/x86_64-linux-gnu/gstreamer-1.0/:/usr/local/lib/x86_64-linux-gnu/
 export PATH=${PROJECT_BIN}:$PATH
-export PKG_CONFIG_PATH=${PROJECT_LIB}/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig
+export PKG_CONFIG_PATH=${PROJECT_LIB}/pkgconfig:${PROJECT_LIB}/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/openmpi/lib/pkgconfig
 
 ##########################################
 #            debug environment           #

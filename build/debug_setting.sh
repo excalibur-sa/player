@@ -24,7 +24,7 @@ export GST_DEBUG=2
 # for MPEG-DASH
 export GST_DEBUG=dashdemux:7,qtdemux:7
 export GST_DEBUG=basesrc:4,v4l2src:7,v4l2:7
-export GST_DEBUG=2
+export GST_DEBUG=2,playbin:2,glframebuffer:7
 
 # no debug log
 #export GST_DEBUG=

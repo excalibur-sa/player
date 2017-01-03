@@ -228,10 +228,6 @@ int main(int argc, char *argv[]) {
   gst_object_unref (tee_video_pad);
   
   /* Free resources */
-  if (msg != NULL)
-    gst_message_unref (msg);
-  if (bus != NULL)
-    gst_object_unref (bus);
   gst_element_set_state (pipeline, GST_STATE_NULL);
   
   gst_object_unref (pipeline);

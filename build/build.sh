@@ -1,78 +1,9 @@
-﻿#!/bin/sh
-
+#!/bin/sh
 ##########################################
 #               environment              #
 ##########################################
-CURRENT_DIR=`pwd`
-PROJECT_ROOT=${CURRENT_DIR}/../
-export GST_VERSION=gstreamer-1.8.3
-export BUILD_DIR=${PROJECT_ROOT}/build/
-export INCLUDE_DIR=${PROJECT_ROOT}/include/
-export DOT_DIR=${PROJECT_ROOT}/dot/
-export LOG_DIR=${PROJECT_ROOT}/log/
-
-export PACKAGE_DIR=${PROJECT_ROOT}/tar/
-
-export TOOLS_DIR=${PROJECT_ROOT}/tools/
-
-export CORE_DIR=${PROJECT_ROOT}/core/
-
-export SOURCE_DIR=${PROJECT_ROOT}/src/
-export PLUGINS_DIR=${SOURCE_DIR}/plugins/
-export PLAYER_DIR=${SOURCE_DIR}/player/
-
-export TEST_DIR=${PROJECT_ROOT}/test/
-
-export INSTALL_DIR=${PROJECT_ROOT}/install/
-export TOOLS_PREFIX=${INSTALL_DIR}/tools/
-export TOOLS_BIN=${TOOLS_PREFIX}/bin/
-export TOOLS_LIB=${TOOLS_PREFIX}/lib/
-export PROJECT_PREFIX=${INSTALL_DIR}/release/
-export PROJECT_BIN=${PROJECT_PREFIX}/bin/
-export PROJECT_LIB=${PROJECT_PREFIX}/lib/
-
-##########################################
-#              automake dir              #
-##########################################
-if [ ! -d $DOT_DIR ];then
- mkdir -p $DOT_DIR
-fi
-if [ ! -d $LOG_DIR ];then
- mkdir -p $LOG_DIR
-fi
-if [ ! -d $TOOLS_DIR ];then
- mkdir -p $TOOLS_DIR
-fi
-if [ ! -d $CORE_DIR ];then
- mkdir -p $CORE_DIR
-fi
-if [ ! -d $INSTALL_DIR ];then
- mkdir -p $INSTALL_DIR
-fi
-if [ ! -d $TOOLS_PREFIX ];then
- mkdir -p $TOOLS_PREFIX
-fi
-if [ ! -d $TOOLS_BIN ];then
- mkdir -p $TOOLS_BIN
-fi
-if [ ! -d $TOOLS_LIB ];then
- mkdir -p $TOOLS_LIB
-fi
-if [ ! -d $PROJECT_PREFIX ];then
- mkdir -p $PROJECT_PREFIX
-fi
-if [ ! -d $PROJECT_BIN ];then
-mkdir -p $PROJECT_BIN
-fi
-if [ ! -d $PROJECT_LIB ];then
- mkdir -p $PROJECT_LIB
-fi
-##########################################
-#          compile environment           #
-##########################################
-export LD_LIBRARY_PATH=${PROJECT_LIB}/
-export PATH=${PROJECT_BIN}:$PATH
-export PKG_CONFIG_PATH=${PROJECT_LIB}/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig
+. env.sh
+cd ${CURRENT_DIR}
 
 ##########################################
 #              function define           #
@@ -81,25 +12,6 @@ building_function(){
  code_dir=$1
  src_package_name=$2
  building_element=$3
- install_dir=$4
-
- config_setting=""
- cfg_para_index=5
- cur_count=1
- echo "The amount of the parameters is $# !"
- #echo "cfg_para_index: $cfg_para_index"
- #echo ""
- for arg in "$@"
- do
-    #echo "The value of the $cur_count parameter is $arg !"
-    if [ $cur_count -ge $cfg_para_index ];then
-    config_setting="${config_setting} $arg"
-    fi
-    let ++cur_count
- done
-
-  #echo ""
-  echo "config_setting: $config_setting"
  
  if [ ! -d ${code_dir}/${building_element} ];then
   tar xvf ${PACKAGE_DIR}/${GST_VERSION}/${src_package_name} -C $code_dir
@@ -113,10 +25,10 @@ building_function(){
  fi
 
  echo "<<< begin compile ${building_element} >>>"
+ cp -rf ${PACKAGE_DIR}/${GST_VERSION}/configure/${building_element}/*  ${code_dir}/${building_element}
  cd ${code_dir}/${building_element}
- ./configure --prefix=${install_dir} ${config_setting}
- make && sudo make install
- #make clean
+ chmod 755 ${code_dir}/${building_element}/configure_compile_install
+ ./configure_compile_install
 
  if [ $? -eq 0 ]; then
     echo "<<< compile ${building_element} success >>>"
@@ -132,7 +44,7 @@ unbuilding_function(){
  unbuilding_element=$2
  echo "<<< begin uninstall ${unbuilding_element} >>>"
  cd ${code_dir}/${unbuilding_element}
- make uninstall
+ sudo make uninstall
 
  if [ $? -eq 0 ]; then
     echo "<<< uninstall ${unbuilding_element} success >>>"
@@ -152,100 +64,103 @@ unbuilding_function(){
 #         unzip and compile core         #
 ##########################################
 echo "### begin unzip and compile core ###"
-cd ${PACKAGE_DIR}/${GST_VERSION}
-#building_function ${CORE_DIR} tar dir ${PROJECT_PREFIX}
+#building_function ${CORE_DIR} tar dir
 
-## ************************* for gstreamer-1.8.3, the dependence as below *************************
-## gstreamer-1.8.3.tar.xz
-## ->glib-2.50.0.tar.xz (Required)
-##   ->pcre-8.39.tar.bz2 (Required)
-##   ->util-linux-2.28.2.tar.xz (Required)
-##   ->zlib-1.2.8.tar.xz (Required)
-##      ->libffi-3.2.1.tar.gz (Required)
-## ->gobject-introspection-1.50.0.tar.xz (Recommended)
-##   ->bison-3.0.4.tar.xz (Required)
-##   ->flex-2.6.0.tar.xz (Required)
-##     ->m4-1.4.17.tar.xz (Required)
-##     ->byacc.tar (Required)
-##   ->Python-2.7.12.tar.xz (Required)
-##     ->libffi-3.2.1.tar.gz (Recommended)
+##########################################
+#  compile and install gstreamer 1.10.2  #
+##########################################
 
-#prce_config="--enable-unicode-properties"
-#building_function ${CORE_DIR} pcre-8.39.tar.bz2 pcre-8.39 ${PROJECT_PREFIX} ${prce_config}
-#building_function ${CORE_DIR} libffi-3.2.1.tar.gz libffi-3.2.1 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} zlib-1.2.8.tar.xz zlib-1.2.8 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} util-linux-2.28.2.tar.xz util-linux-2.28.2 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} glib-2.50.0.tar.xz glib-2.50.0 ${PROJECT_PREFIX}
+## ************************* for gstreamer-1.10.2, the dependence as below *************************
+#GLib-2.50.2
+#Required
+# libffi-3.2.1 and Python-2.7.13 or Python-3.5.2
+#Recommended
+# PCRE-8.39 (built with Unicode properties)
+#Optional
+# dbus-1.10.14 (required for some tests), elfutils-0.168, GTK-Doc-1.25, FAM library, and GNU Indent
 
-#python27_config="--enable-shared"
-#building_function ${CORE_DIR} Python-2.7.12.tar.xz Python-2.7.12 ${PROJECT_PREFIX} ${python27_config}
-#building_function ${CORE_DIR} m4-1.4.17.tar.xz m4-1.4.17 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} byacc.tar byacc-20160606 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} flex-2.6.0.tar.xz flex-2.6.0 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} bison-3.0.4.tar.xz bison-3.0.4 ${PROJECT_PREFIX}
+#gobject-introspection-1.50.0
+#Required
+# GLib-2.50.2 and Python-2.7.13
+#Optional
+# Cairo-1.14.8 (required for the tests), GTK-Doc-1.25 and Mako-1.0.4
 
-#TODO (compile for source code in the future)
-#gi_config="--disable-static"
-#building_function ${CORE_DIR} gobject-introspection-1.50.0.tar.xz gobject-introspection-1.50.0 ${PROJECT_PREFIX} ${gi_config}
-#sudo apt-get install gobject-introspection
+#gstreamer-1.10.2
+#Required
+# GLib-2.50.2
+#Recommended
+# gobject-introspection-1.50.0
+#Optional
+# GTK+-3.22.5 (for examples), Gsl-2.3, GTK-Doc-1.25, and Valgrind-3.12.0
 
-#gstreamer183_config="--disable-check"
-building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_PREFIX} 
-#${gstreamer183_config}
+#sudo apt install libbz2-dev
+#building_function ${CORE_DIR} pcre-8.39.tar.bz2 pcre-8.39 
+#building_function ${CORE_DIR} libffi-3.2.1.tar.gz libffi-3.2.1 
+#building_function ${CORE_DIR} Python-2.7.13.tar.xz Python-2.7.13
+#sudo apt install libmount-dev
+#building_function ${CORE_DIR} glib-2.50.2.tar.xz glib-2.50.2
 
+#sudo apt install libbison-dev
+#building_function ${CORE_DIR} gobject-introspection-1.50.0.tar.xz gobject-introspection-1.50.0
 
+#building_function ${CORE_DIR} gstreamer-1.10.2.tar.xz gstreamer-1.10.2
 
-## ************************* for gst-plugins-base-1.8.3, the dependence as below *************************
-## gst-plugins-base-1.8.3.tar.xz
-## ->gstreamer-1.8.3.tar.xz (Required)
-## ->alsa-lib-1.1.2.tar.bz2 (Optional)
-## ->libogg-1.3.2.tar.xz (Optional)
+## ************************* for gst-plugins-base-1.10.2, the dependence as below *************************
+#gst-plugins-base-1.10.2
+#Required
+# gstreamer-1.10.2
+#Recommended
+# alsa-lib-1.1.2, CDParanoia-III-10.2 (for building the CDDA plugin), gobject-introspection-1.50.0, ISO Codes-3.72, libogg-1.3.2, libtheora-1.1.1, libvorbis-1.3.5, and Xorg Libraries
+#Optional
+# GTK+-3.22.5 (for examples), GTK-Doc-1.25, Opus-1.1.3, Qt-5.7.1 (for examples), Valgrind-3.12.0, libvisual, Orc, and Tremor
 
-#TODO
-#building_function ${CORE_DIR} alsa-lib-1.1.2.tar.bz2 alsa-lib-1.1.2 ${PROJECT_PREFIX}
 #sudo apt-get install libasound2-dev alsa-base alsa-utils alsa-source
+#building_function ${CORE_DIR} libogg-1.3.2.tar.xz libogg-1.3.2
 
-#ogg_config="--disable-static"
-#building_function ${CORE_DIR} libogg-1.3.2.tar.xz libogg-1.3.2 ${PROJECT_PREFIX} ${ogg_config}
-
-#TODO for x window display
 #sudo apt-get install libx11-dev libxv-dev libxt-dev
-#building_function ${CORE_DIR} gst-plugins-base-1.8.3.tar.xz gst-plugins-base-1.8.3 ${PROJECT_PREFIX}
+#building_function ${CORE_DIR} gst-plugins-base-1.10.2.tar.xz gst-plugins-base-1.10.2
 
+## ************************* for gst-plugins-good-1.10.2, the dependence as below *************************
+#GnuTLS-3.5.7
+#Required
+# Nettle-3.3
+#Recommended
+# Certificate Authority Certificates, libunistring-0.9.7, libtasn1-4.9, and p11-kit-0.23.2
+#Optional
+# Doxygen-1.8.12, GTK-Doc-1.25, Guile-2.0.13, libidn-1.33, Net-tools-CVS_20101030 (used during the test suite), texlive-20160523b or install-tl-unx, Unbound-1.6.0 (to build the DANE library), Valgrind-3.12.0 (used during the test suite), autogen, cmocka, datefudge (used during the test suite), and Trousers (Trusted Platform Module support)
 
+#glib-networking-2.50.0
+#Required
+# GLib-2.50.2, GnuTLS-3.5.7 and gsettings-desktop-schemas-3.22.0
+#Recommended
+# Certificate Authority Certificates and p11-kit-0.23.2
+#Optional
+# libproxy
 
-## ************************* for gst-plugins-good-1.8.3, the dependence as below *************************
-## gst-plugins-good-1.8.3.tar.xz
-## ->libsoup-2.56.0.tar.xz
-##   ->sqlite-autoconf-3140200.tar.gz
-##   ->libxml2-2.9.4.tar.gz
-##   ->glib-networking-2.50.0.tar.xz
-##     ->gnutls-3.5.4.tar.xz
-##       ->nettle-3.2.tar.gz
-##     ->gsettings-desktop-schemas-3.22.0.tar.xz
-##     ->glib-2.50.0.tar.xz
+#libsoup-2.56.0
+#Required
+# glib-networking-2.50.0, libxml2-2.9.4 and SQLite-3.15.2
+#Recommended
+# gobject-introspection-1.50.0 and Vala-0.34.4
+#Optional
+# Apache-2.4.25 (required to run the test suite), cURL-7.52.1 (required to run the test suite), MIT Kerberos V5-1.15 (required to run the test suite), GTK-Doc-1.25, PHP-7.1.0 compiled with XMLRPC-EPI support (only used for the XMLRPC regression tests) and Samba-4.5.3 (ntlm_auth is required to run the test suite).
 
-#TODO
-#sudo apt-get install intltool
+#gst-plugins-good-1.10.2
+#Required
+# gst-plugins-base-1.10.2
+#Recommended
+# Cairo-1.14.8, FLAC-1.3.1, gdk-pixbuf-2.36.2, libjpeg-turbo-1.5.1, libpng-1.6.26, libsoup-2.56.0, libvpx-1.6.0, and Xorg Libraries
+#Optional
+# AAlib-1.4rc5, ALSA OSS-1.0.28, GTK+-3.22.5 (for examples), GTK-Doc-1.25, libdv-1.0.0, libgudev-230, PulseAudio-9.0, Speex-1.2rc2, taglib-1.11.1, Valgrind-3.12.0, v4l-utils-1.10.1, JACK, libcaca, libiec61883, libraw1394, libshout, Orc, and WavPack
 
-#building_function ${CORE_DIR} gsettings-desktop-schemas-3.22.0.tar.xz gsettings-desktop-schemas-3.22.0 ${PROJECT_PREFIX}
-
-#TODO
-#sudo apt-get install libgmp-dev
-
-#nettle_config="--disable-static"
-#building_function ${CORE_DIR} nettle-3.2.tar.gz nettle-3.2 ${PROJECT_PREFIX}
-
-#TODO
-#sudo apt-get install autogen
-
-#gnutls_config="--with-included-libtasn1 --without-p11-kit"
-#building_function ${CORE_DIR} gnutls-3.5.4.tar.xz gnutls-3.5.4 ${PROJECT_PREFIX} ${gnutls_config}
-
-#building_function ${CORE_DIR} glib-networking-2.50.0.tar.xz glib-networking-2.50.0 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} libxml2-2.9.4.tar.gz libxml2-2.9.4 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} sqlite-autoconf-3140200.tar.gz sqlite-autoconf-3140200 ${PROJECT_PREFIX}
-#building_function ${CORE_DIR} libsoup-2.56.0.tar.xz libsoup-2.56.0 ${PROJECT_PREFIX}
+#building_function ${CORE_DIR} nettle-3.3.tar.gz nettle-3.3
+#building_function ${CORE_DIR} gnutls-3.5.7.tar.xz gnutls-3.5.7
+#building_function ${CORE_DIR} gsettings-desktop-schemas-3.22.0.tar.xz gsettings-desktop-schemas-3.22.0
+#building_function ${CORE_DIR} glib-networking-2.50.0.tar.xz glib-networking-2.50.0
+#building_function ${CORE_DIR} libxml2-2.9.4.tar.gz libxml2-2.9.4
+#building_function ${CORE_DIR} sqlite-autoconf-3150200.tar.gz sqlite-autoconf-3150200
+#building_function ${CORE_DIR} vala-0.34.4.tar.xz vala-0.34.4
+#building_function ${CORE_DIR} libsoup-2.56.0.tar.xz libsoup-2.56.0
 
 #TODO for video sink
 #sudo apt-get install libjpeg-dev
@@ -253,35 +168,97 @@ building_function ${CORE_DIR} gstreamer-1.8.3.tar.xz gstreamer-1.8.3 ${PROJECT_P
 
 #TODO for mp4/mkv etc.
 #sudo apt-get install zlib1g-dev
-#building_function ${CORE_DIR} gst-plugins-good-1.8.3.tar.xz gst-plugins-good-1.8.3 ${PROJECT_PREFIX}
+#building_function ${CORE_DIR} gst-plugins-good-1.10.2.tar.xz gst-plugins-good-1.10.2
 
 
-## ************************* for gst-plugins-bad-1.8.3, the dependence as below ************************* 
-## gst-plugins-bad-1.8.3.tar.xz
+## ************************* for gst-plugins-bad-1.10.2, the dependence as below ************************* 
+## gst-plugins-bad-1.10.2
+#Required
+# gst-plugins-base-1.10.2
+#Recommended
+# libdvdread-5.0.3, libdvdnav-5.0.3, LLVM-3.9.1, and SoundTouch-1.9.2
+#Optional
+# BlueZ-5.43, Clutter-1.26.0, cURL-7.52.1, FAAC-1.28, FAAD2-2.7, GnuTLS-3.5.7, GTK-Doc-1.25, GTK+-2.24.31 or GTK+-3.22.5, libass-0.13.5, libexif-0.6.21, libgcrypt-1.7.5, libmpeg2-0.5.1, libvdpau-1.1.1, libwebp-0.5.2, Mesa-13.0.2, mpg123-1.23.8, neon-0.30.2, Nettle-3.3, opencv-3.2.0 (with additional modules), OpenJPEG-1.5.2 or OpenJPEG-2.1.2, Opus-1.1.3, Qt-5.7.1 (for examples), SDL-1.2.15, Valgrind-3.12.0, Wayland-1.12.0, x265-2.2, Xorg Libraries, bs2b, Chromaprint, daala, Flite, Game Music Emu, GSM, libmimic, libmms, libofa, MJPEG Tools, OpenAL, Orc, VO AAC, VO AMRWB, and ZBAR
 
 #TODO for curl
 #sudo apt-get install libcurl4-gnutls-dev
-#building_function ${CORE_DIR} gst-plugins-bad-1.8.3.tar.xz gst-plugins-bad-1.8.3 ${PROJECT_PREFIX}
 
-## ************************* for gst-plugins-ugly-1.8.3, the dependence as below ************************* 
-## gst-plugins-ugly-1.8.3.tar.xz
-## ->libmad-0.15.1b.tar.gz
-## ->libmpeg2-0.5.1.tar.gz
+#@@@@ FOR VR
+#TODO for opengl
+#安装OpenGL Library
+#$ sudo apt-get install libgl1-mesa-dev
+#安装OpenGL Utilities
+#$ sudo apt-get install libglu1-mesa-dev OpenGL Utilities 是一组建构于 OpenGL Library 之上的工具组，提供许多很方便的函式，使 OpenGL 更强大且更容易使用。
+#安装OpenGL Utility Toolkit
+#$ sudo apt-get install libglut-dev OpenGL Utility Toolkit 是建立在 OpenGL Utilities 上面的工具箱，除了强化了 OpenGL Utilities 的不足之外，也增加了 OpenGL 对于视窗介面支援。 注意：在这一步的时候，可能会出现以下情况，shell提示： Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package libglut-dev
+#将上述$ sudo apt-get install libglut-dev命令改成$ sudo apt-get install freeglut3-dev即可。
 
-#building_function ${CORE_DIR} libmpeg2-0.5.1.tar.gz libmpeg2-0.5.1 ${PROJECT_PREFIX}
+#@@@@ FOR VR
+#sudo apt-get install meson
+#下载 编译 OpendHMD 的工具
+#sudo apt-get install autotools-dev m4 autoconf2.13  autoconf-archive gnu-standards autoconf-doc libtool
+#sudo apt-get install libhidapi-dev
+#下载 OpenHMD
+#git clone https://github.com/excalibur-sa/OpenHMD.git
+#按照文档编译安装 OpenHMD
+#下载 libfreenect2 的依赖
+#sudo apt-get install libusb-1.0-0-dev
+#sudo apt-get install libturbojpeg
+#sudo apt-get install libglfw3-dev
+#sudo apt-get install beignet-dev
+#sudo apt-get install libva-dev libjpeg-dev
+#sudo apt-get install libopenni2-dev
+#下载 libfreenect2
+#git clone https://github.com/excalibur-sa/libfreenect2.git
+#按照文档编译安装 libfreenect2
+
+#下载 graphene 依赖
+#sudo apt install libboost-dev
+#sudo apt install libboost1.58-all-dev
+#sudo apt-get install libssl-dev
+#sudo apt-get install openssl 
+
+#下载 graphene
+#git clone https://github.com/excalibur-sa/graphene.git
+#下载 python3-all-dev
+#sudo apt install python3-all-dev
+#下载 libgtk-3-dev
+#sudo apt install libgtk-3-dev
+
+#building_function ${CORE_DIR} gst-plugins-bad-1.10.2.tar.xz gst-plugins-bad-1.10.2
+
+## ************************* for gst-plugins-ugly-1.10.2, the dependence as below ************************* 
+#gst-plugins-ugly-1.10.2
+#Required
+# gst-plugins-base-1.10.2
+#Recommended
+# LAME-3.99.5, liba52-0.7.4 (needed to play DVD's), libdvdread-5.0.3, and x264-20160827-2245
+#Optional
+# libmad-0.15.1b, libmpeg2-0.5.1, libcdio-0.94 (for CD-ROM drive access), mpg123-1.23.8, Valgrind-3.12.0, libsidplay, OpenCore AMR, Orc, and TwoLame
+
+#building_function ${CORE_DIR} libmpeg2-0.5.1.tar.gz libmpeg2-0.5.1
 
 #TODO
+#sudo apt-get install libmad0-dev
 #building_function ${CORE_DIR} mad-0.14.2b.tar.gz mad-0.14.2b ${PROJECT_PREFIX}
 
 #sudo apt-get install libx264-dev
 
-#building_function ${CORE_DIR} gst-plugins-ugly-1.8.3.tar.xz gst-plugins-ugly-1.8.3 ${PROJECT_PREFIX}
+building_function ${CORE_DIR} gst-plugins-ugly-1.10.2.tar.xz gst-plugins-ugly-1.10.2
 
-## ************************* for gst-libav-1.8.3, the dependence as below ************************* 
-## gst-libav-1.8.3.tar.xz
+## ************************* for gst-libav-1.10.2, the dependence as below ************************* 
+## gst-libav-1.10.2
+#building_function ${CORE_DIR} gst-libav-1.10.2.tar.xz gst-libav-1.10.2
 
-#libav_config="--with-libav-extra-configure=\"--disable-yasm\""
-#building_function ${CORE_DIR} gst-libav-1.8.3.tar.xz gst-libav-1.8.3 ${PROJECT_PREFIX} ${libav_config}
+##########################################
+#         uninstall gstreamer 1.10.2      #
+##########################################
+#unbuilding_function ${CORE_DIR} gstreamer-1.10.2
+#unbuilding_function ${CORE_DIR} gst-plugins-base-1.10.2
+#unbuilding_function ${CORE_DIR} gst-plugins-good-1.10.2
+#unbuilding_function ${CORE_DIR} gst-plugins-bad-1.10.2
+#unbuilding_function ${CORE_DIR} gst-plugins-ugly-1.10.2
+#unbuilding_function ${CORE_DIR} gst-libav-1.10.2
 
 echo "compile core end."
 

@@ -1,0 +1,8 @@
+patch -Np1 -i ../libmad-0.15.1b-fixes-1.patch                &&
+sed "s@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@g" -i configure.ac &&
+touch NEWS AUTHORS ChangeLog                                 &&
+autoreconf -fi                                               &&
+
+./configure --prefix=${PROJECT_PREFIX} --disable-static      &&
+make -j 32                                                   &&
+sudo make install

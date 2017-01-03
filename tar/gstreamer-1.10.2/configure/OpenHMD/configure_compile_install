@@ -1,0 +1,4 @@
+./autogen.sh                            &&
+./configure --prefix=${PROJECT_PREFIX}  &&
+make                                    &&
+sudo make install
