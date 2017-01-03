@@ -1,0 +1,3 @@
+./configure --prefix=${PROJECT_PREFIX} --with-pcre=system  &&
+make -j 32                                                 &&
+sudo make install

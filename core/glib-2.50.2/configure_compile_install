@@ -1,0 +1,6 @@
+sudo make clean &&
+./configure --prefix=${PROJECT_PREFIX}          \
+            --with-pcre=system                  \
+            CFLAGS="-I$PROJECT_PREFIX/include" &&
+sudo make -j 32                                &&
+sudo make install

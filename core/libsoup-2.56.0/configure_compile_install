@@ -1,0 +1,5 @@
+./configure --prefix=${PROJECT_PREFIX}                          \
+            --disable-static                                    \
+            --disable-vala                                     &&
+sudo make -j 32                                                &&
+sudo make install

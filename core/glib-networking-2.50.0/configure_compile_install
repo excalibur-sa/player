@@ -1,0 +1,5 @@
+./configure --prefix=${PROJECT_PREFIX}                          \
+            --with-ca-certificates=/etc/ssl/ca-bundle.crt       \
+            --disable-static                                   &&
+make -j 32                                                     &&
+sudo make install

@@ -1,0 +1,13 @@
+./configure --prefix=${PROJECT_PREFIX}                          \
+            --docdir=${PROJECT_PREFIX}/share/doc/pcre-8.39      \
+            --enable-unicode-properties                         \
+            --enable-pcre16                                     \
+            --enable-pcre32                                     \
+            --enable-pcregrep-libz                              \
+            --enable-pcregrep-libbz2                            \
+            --enable-pcretest-libreadline                       \
+            --disable-static                                   &&
+sudo make uninstall                                            &&
+make clean                                                     &&
+make -j 32                                                     &&
+sudo make install

@@ -1,0 +1,6 @@
+system/inet_ntop.lo: system/inet_ntop.c /usr/include/stdc-predef.h \
+ ../config.h
+
+/usr/include/stdc-predef.h:
+
+../config.h:

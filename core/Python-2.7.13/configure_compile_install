@@ -1,0 +1,8 @@
+./configure --prefix=${PROJECT_PREFIX} \
+            --enable-shared            \
+            --with-system-expat        \
+            --with-system-ffi          \
+            --enable-unicode=ucs4     &&
+make -j 32                            &&
+sudo make install                     &&
+sudo chmod -v 755 ${PROJECT_PREFIX}/lib/libpython2.7.so.1.0

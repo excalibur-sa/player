@@ -1,0 +1,4 @@
+./configure --prefix=${PROJECT_PREFIX}                          \
+            --disable-static --with-history                    &&
+make -j 32                                                     &&
+sudo make install
