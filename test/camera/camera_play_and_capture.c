@@ -156,7 +156,7 @@ int main(int argc, char *argv[]) {
   
   /* Configure elements */
   //g_object_set (video_source, "num-buffers", 10, NULL);
-  caps = gst_caps_from_string("image/jpeg, width=640, height=480");
+  caps = gst_caps_from_string("image/jpeg, width=320, height=240");
   g_object_set (fmt, "caps", caps, NULL);
 
   /* Setting user data */

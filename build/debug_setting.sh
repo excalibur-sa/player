@@ -29,6 +29,9 @@ export GST_DEBUG=2,playbin:2,glframebuffer:7
 # no debug log
 #export GST_DEBUG=
 
+# core dump
+# ulimit -c unlimited
+
 ##########################################
 #             test command               #
 ##########################################
